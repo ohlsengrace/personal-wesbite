@@ -1,1 +1,53 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+  }
+
+  html{
+      background-color: var(--isabelline);
+  }
+
+  h1{
+      color: var(--dark-jungle-green);
+  }
+  h2{
+      color: var(--rich-black)
+  }
+  h3{
+      color: var(--midnight-green-eagle-green)
+  }
+
+  .content {
+    background-color: var(--isabelline);
+    padding-top: 10px;
+    padding-left: 15px;
+  }
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  a { 
+    text-decoration: none;
+    color: black
+   }
+
+
+
+
+  /* Color Palette */
+
+  :root{
+    --dark-jungle-green: #002529ff;
+    --rich-black: #00373dff;
+    --midnight-green-eagle-green: #004852ff;
+    --middle-grey: #8a817cff;
+    --pale-silver: #bcb8b1ff;
+    --isabelline: #f4f3eeff;
+    --dark-cornflower-blue: #26437eff;
+  }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

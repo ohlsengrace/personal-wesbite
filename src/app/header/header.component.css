@@ -1,0 +1,21 @@
+/* Style the top navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color: var(--middle-grey);
+  }
+  
+  /* Style the topnav links */
+  .topnav a {
+    float: left;
+    display: block;
+    color: var(--isabelline);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change color on hover */
+  .topnav a:hover {
+    background-color: var(--isabelline);
+    color: var(--dark-jungle-green);
+  }

@@ -1,0 +1,15 @@
+/* Style the footer */
+.footer {
+    color: var(--dark-jungle-green);
+    background-color: var(--pale-silver);
+    height: 60px;  /* footer height */
+    padding-top: 20px;
+    padding-bottom: 70px;
+    display: block;
+    margin-top: 20px; /* space between content and footer */
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+  }
+

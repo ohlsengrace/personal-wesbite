@@ -1,0 +1,162 @@
+<!-- 
+TO-DO
+
+Create a tag system... qualifications for a candidate
+Ex. { C++ }, { Front-End Dev }, { Leadership }, { Collaborative }
+
+Allow for employers to filter out experiences based on what they're looking for.
+
+
+Also include a print functionality
+
+-->>
+
+
+
+
+<div class="content">
+    <h1>Resume/ Projects</h1>
+    <p>Here is my interactive resume. To sort experiences by desired traits, click on one or more of the traits below. Experiences that highlight that trait will be highlighted and the rest will be filtered out. Additionally, to learn more about any of the experiences, simply click on its title.</p>
+    <br>
+    <br>
+    <app-chips (selectionEvent)="receiveSelectedTraits($event)"></app-chips>
+    <h1>Received By Parent Component</h1>
+    <ul>
+      <li *ngFor="let selection of selectedTraits">{{selection.name}}</li>
+    </ul>
+    <br>
+    <h2>Education</h2>
+  </div>
+
+
+<!-- Education -->
+
+
+<div *ngFor="let block of blocks" >
+  <div class="block" *ngIf="block.category == 1">
+    <div class="same-line" >
+      <div class="exp-title" *ngIf="isValidTitleLink(block) == true">
+        <a href={{block.titleLink}}>{{block.title}}</a>
+      </div>
+      <div class="exp-title" *ngIf="isValidTitleLink(block) == false">
+        <a>{{block.title}}</a>
+      </div>
+      <div class="exp-date" >{{block.date}}</div>
+    </div>
+    <div style="clear: both;"></div>
+    <br>
+    <div class="exp-position">{{block.subtitle}}</div>
+  
+    <ul>
+      <li *ngFor="let bullet of block.bulletedInfo">{{bullet}}</li>
+    </ul>
+  </div>
+  
+</div>
+
+
+<!-- CS Coursework -->
+<div class="content">
+  <br>
+  <h2>C.S. Coursework</h2>
+</div>
+
+<div *ngFor="let block of blocks" >
+  <div class="block" *ngIf="block.category == 2">
+    <div class="same-line" >
+      <div class="exp-title" *ngIf="isValidTitleLink(block) == true">
+        <a href={{block.titleLink}}>{{block.title}}</a>
+      </div>
+      <div class="exp-title" *ngIf="isValidTitleLink(block) == false">
+        <a>{{block.title}}</a>
+      </div>
+      <div class="exp-date" >{{block.date}}</div>
+    </div>
+    <div style="clear: both;"></div>
+    <br>
+    <div class="exp-position">{{block.subtitle}}</div>
+  
+    <ul>
+      <li *ngFor="let bullet of block.bulletedInfo">{{bullet}}</li>
+    </ul>
+  </div>
+  
+</div>
+
+
+
+
+
+<!-- Projects -->
+<div class="content">
+  <br>
+  <h2>Projects</h2>
+</div>
+
+
+<div *ngFor="let block of blocks" >
+  <div class="block" *ngIf="block.category == 3">
+    <div class="same-line" >
+      <div class="exp-title" *ngIf="isValidTitleLink(block) == true">
+        <a href={{block.titleLink}}>{{block.title}}</a>
+      </div>
+      <div class="exp-title" *ngIf="isValidTitleLink(block) == false">
+        <a>{{block.title}}</a>
+      </div>
+      <div class="exp-date" >{{block.date}}</div>
+    </div>
+    <div style="clear: both;"></div>
+    <br>
+    <div class="exp-position">{{block.subtitle}}</div>
+  
+    <ul>
+      <li *ngFor="let bullet of block.bulletedInfo">{{bullet}}</li>
+    </ul>
+  </div>
+  
+</div>
+
+
+<!-- Work Experience -->
+<div class="content">
+  <br>
+  <h2>Work Experience</h2>
+</div>
+
+<div *ngFor="let block of blocks" >
+  <div class="block" *ngIf="block.category == 4">
+    <div class="same-line" >
+      <div class="exp-title" *ngIf="isValidTitleLink(block) == true">
+        <a href={{block.titleLink}}>{{block.title}}</a>
+      </div>
+      <div class="exp-title" *ngIf="isValidTitleLink(block) == false">
+        <a>{{block.title}}</a>
+      </div>
+      <div class="exp-date" >{{block.date}}</div>
+    </div>
+    <div style="clear: both;"></div>
+    <br>
+    <div class="exp-position">{{block.subtitle}}</div>
+  
+    <ul>
+      <li *ngFor="let bullet of block.bulletedInfo">{{bullet}}</li>
+    </ul>
+  </div>
+  
+</div>
+
+
+
+
+<!-- Extracurricular Activities -->
+<div class="content">
+  <br>
+  <h2>Extracurricular Activities</h2>
+</div>
+
+<!-- Achievements -->
+<div class="content">
+  <br>
+  <h2>Achievements</h2>
+</div>
+

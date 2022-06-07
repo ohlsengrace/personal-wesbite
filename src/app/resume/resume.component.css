@@ -1,0 +1,35 @@
+.block{
+  border-radius: 4px;
+  border: solid var(--pale-silver);
+  color: var(--dark-jungle-green);
+  padding-top: 10px;
+  margin: 10px;
+  height: fit-content;
+  line-height: 1.2
+};
+
+
+.same-line {
+    height: 10px; /*childrens it's all absolute position, so must set height*/
+    position: relative;
+}
+.same-line div{
+    display: inline-block;
+    position: absolute;
+}
+
+.exp-title{
+ left:20px;
+ font-weight: 800;
+}
+
+.exp-date{
+   right: 20px;
+   text-align: right;
+}
+
+.exp-position{
+    font-style: italic;
+    left: 20px;
+    position: absolute;
+}
