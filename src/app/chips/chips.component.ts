@@ -1,6 +1,8 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { TraitService } from '../trait/trait.service';
 import { Trait } from '../trait/trait';
+import { MatChip } from '@angular/material/chips';
 
 // CHILD COMPONENT TO RESUME COMPONENT
 
@@ -27,28 +29,20 @@ export class ChipsComponent implements OnInit {
     this.traits = this.traitService.getTraits();
   }
 
-  selectChip(traitId:number){
 
-    let isSelected:boolean = false;
-    let index:number = 0;
 
-    for(let i = 0; i < this.selectedTraits.length; i++){
-      if(this.selectedTraits[i].id == traitId){
-        isSelected = true;
-        index = i;
-        break;
-      }
-    }
 
-    // unselect chip
-    if(isSelected){
-      this.selectedTraits.splice(index,1);
+
+  toggleSelection(chip: MatChip, trait: Trait) {
+    chip.toggleSelected();
+    chip.color = 'primary';
+    if(chip.selected == true){
+      this.selectedTraits.push(trait);
     }else{
-      this.selectedTraits.push(this.traits[traitId]);
+      this.selectedTraits.splice(this.selectedTraits.indexOf(trait),1);
     }
-
-
 
     this.selectionEvent.emit(this.selectedTraits);
-  }
+ }
+  
 }

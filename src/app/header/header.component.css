@@ -1,21 +1,31 @@
-/* Style the top navigation bar */
-.topnav {
-    overflow: hidden;
-    background-color: var(--middle-grey);
-  }
-  
-  /* Style the topnav links */
-  .topnav a {
-    float: left;
-    display: block;
-    color: var(--isabelline);
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  /* Change color on hover */
-  .topnav a:hover {
-    background-color: var(--isabelline);
-    color: var(--dark-jungle-green);
-  }
+div.title {
+  margin: auto;
+  width: 100%;
+  overflow: auto;
+  padding-top: 120px;
+  padding-bottom: 60px;
+  background-color: var(--english-violet);
+  color: white;
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 80px;
+}
+
+div.navigation {
+  background-color: var(--english-violet);
+  color: white;
+  overflow: auto;
+  white-space: nowrap;
+  text-align: center;
+}
+
+div.navigation a {
+  color: white;
+  display: inline-block;
+  text-align: center;
+  padding: 15px;
+}
+
+div.navigation a:hover {
+  background-color: grey;
+}

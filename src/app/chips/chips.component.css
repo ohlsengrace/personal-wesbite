@@ -4,3 +4,13 @@ mat-icon {
     font-size: 20px;
     margin-right: 5px;
 }
+
+.chip-list{
+    padding: 20px;
+    margin: auto;
+    width:100%
+}
+
+mat-chip {
+    color: var(--honeydew)
+}

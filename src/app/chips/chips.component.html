@@ -1,10 +1,20 @@
-<mat-chip-list aria-label="Trait selection" selectable multiple>
-    <mat-chip *ngFor="let trait of traits" (click)="selectChip(trait.id)">
-        {{trait.name}}
-    </mat-chip>
-  </mat-chip-list>
+<mat-form-field class="chip-list" appearance="fill">
 
-  <h5>Currently Selected Traits</h5>
-  <ul>
-      <li *ngFor="let selection of selectedTraits">{{selection.name}}</li>
-  </ul>
+  <mat-label>Candidate Traits</mat-label>
+
+
+  <mat-chip-list #chipList aria-label="Trait Selection" selectable multiple>
+
+    <mat-chip
+      #c ="matChip"
+      *ngFor="let trait of traits"
+      (click)="toggleSelection(c,trait)"
+      >
+      {{trait.name}}
+      
+    </mat-chip>
+
+
+  </mat-chip-list>
+</mat-form-field>
+

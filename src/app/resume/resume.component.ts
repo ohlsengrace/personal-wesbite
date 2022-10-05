@@ -35,6 +35,26 @@ export class ResumeComponent implements OnInit {
     this.selectedTraits = $event;
   }
 
+  isSelectedBlock(blockTraits:Trait[]): boolean{
+
+    let isSelected:boolean = false;
+
+    // if no selected traits, display all
+    if(this.selectedTraits.length == 0){
+      return true;
+    }
+    
+    for(let i = 0; i < this.selectedTraits.length; i++){
+      for(let j = 0; j < blockTraits.length; j++){
+        if(this.selectedTraits[i] == blockTraits[j]){
+          isSelected = true;
+          break;
+        }
+      }
+    }
+    return isSelected;
+  }
+
 
   isValidTitleLink(block:Block): boolean{
     if(block.titleLink == ''){

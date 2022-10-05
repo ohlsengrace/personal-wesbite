@@ -1,7 +1,7 @@
 /* Style the footer */
 .footer {
-    color: var(--dark-jungle-green);
-    background-color: var(--pale-silver);
+    color: white;
+    background-color: var(--english-violet);
     height: 60px;  /* footer height */
     padding-top: 20px;
     padding-bottom: 70px;

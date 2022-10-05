@@ -12,7 +12,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ChipsComponent } from './chips/chips.component';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatIconModule } from '@angular/material/icon';
-
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FormsModule } from '@angular/forms';
+import { GalleryComponent } from './gallery/gallery.component';
 
 
 
@@ -25,14 +27,17 @@ import { MatIconModule } from '@angular/material/icon';
     HomeComponent,
     ContactComponent,
     ResumeComponent,
-    ChipsComponent
+    ChipsComponent,
+    GalleryComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatChipsModule,
-    MatIconModule
+    MatIconModule,
+    MatFormFieldModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

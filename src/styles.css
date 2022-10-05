@@ -1,25 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
 * {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: sans-serif;;
     box-sizing: border-box;
   }
 
   html{
-      background-color: var(--isabelline);
+      background-color: var(--blue-bell);
   }
 
   h1{
-      color: var(--dark-jungle-green);
+      color: var(--raisin-black);
   }
   h2{
-      color: var(--rich-black)
+      color: var(--space-cadet)
   }
   h3{
-      color: var(--midnight-green-eagle-green)
+      color: var(--english-violet)
   }
 
   .content {
-    background-color: var(--isabelline);
+    background-color: var(--blue-bell);
     padding-top: 10px;
     padding-left: 15px;
   }
@@ -47,6 +47,27 @@ body {
     --pale-silver: #bcb8b1ff;
     --isabelline: #f4f3eeff;
     --dark-cornflower-blue: #26437eff;
+    --old-burgundy: #4b3b40ff;
+
+    --shadow: #82735cff;
+    --olivine: #9db17cff;
+    --granny-smith-apple: #9cde9fff;
+    --tea-green: #d1f5beff;
+    --nyanza: #d1f0d2ff;
+    --mint-cream: #f0faf0ff;
+    --honeydew: #e0f5e0ff;
+
+    --pink-lace: #eed3eaff;
+    --thistle: #e8c4e3ff;
+
+    --african-violet: #bf88bfff;
+    --lilac: #c2a5caff;
+    --blue-bell: #a49ebdff;
+
+    --raisin-black: #242131ff;
+    --space-cadet: #363249ff;
+    --english-violet: #403a55ff;
+    --blue-bell: #a49ebdff;
   }
 
 html, body { height: 100%; }

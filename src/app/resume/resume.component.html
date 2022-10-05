@@ -9,7 +9,7 @@ Allow for employers to filter out experiences based on what they're looking for.
 
 Also include a print functionality
 
--->>
+-->
 
 
 
@@ -17,13 +17,6 @@ Also include a print functionality
 <div class="content">
     <h1>Resume/ Projects</h1>
     <p>Here is my interactive resume. To sort experiences by desired traits, click on one or more of the traits below. Experiences that highlight that trait will be highlighted and the rest will be filtered out. Additionally, to learn more about any of the experiences, simply click on its title.</p>
-    <br>
-    <br>
-    <app-chips (selectionEvent)="receiveSelectedTraits($event)"></app-chips>
-    <h1>Received By Parent Component</h1>
-    <ul>
-      <li *ngFor="let selection of selectedTraits">{{selection.name}}</li>
-    </ul>
     <br>
     <h2>Education</h2>
   </div>
@@ -54,6 +47,10 @@ Also include a print functionality
   
 </div>
 
+<br>
+<app-chips (selectionEvent)="receiveSelectedTraits($event)"></app-chips>
+
+
 
 <!-- CS Coursework -->
 <div class="content">
@@ -62,8 +59,8 @@ Also include a print functionality
 </div>
 
 <div *ngFor="let block of blocks" >
-  <div class="block" *ngIf="block.category == 2">
-    <div class="same-line" >
+  <div class="block" *ngIf="block.category == 2 && isSelectedBlock(block.traits) == true" >
+    <div class="same-line">
       <div class="exp-title" *ngIf="isValidTitleLink(block) == true">
         <a href={{block.titleLink}}>{{block.title}}</a>
       </div>
@@ -95,7 +92,7 @@ Also include a print functionality
 
 
 <div *ngFor="let block of blocks" >
-  <div class="block" *ngIf="block.category == 3">
+  <div class="block" *ngIf="block.category == 3 && isSelectedBlock(block.traits) == true">
     <div class="same-line" >
       <div class="exp-title" *ngIf="isValidTitleLink(block) == true">
         <a href={{block.titleLink}}>{{block.title}}</a>
